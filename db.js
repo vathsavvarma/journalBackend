@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 require('dotenv').config();
 
-const mongoURL = process.env.MONGODB_URL;
+const dbURI = process.env.MONGODB_URL;
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', () => {
